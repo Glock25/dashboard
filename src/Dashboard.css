@@ -1,0 +1,20 @@
+
+.bg-color{background: #f2f7ff;}
+.topprice{display: block;}
+
+
+.rtcontent{    line-height: 23px;}
+
+
+
+.gradient{
+    background: rgb(11,61,159);
+    background: linear-gradient(198deg, rgba(11,61,159,1) 22%, rgba(15,136,228,1) 100%);
+}
+.gradienttwo{
+    background: rgb(6,121,139);
+    background: linear-gradient(198deg, rgba(6,121,139,1) 22%, rgba(13,203,213,1) 100%);
+
+    
+}
+
