@@ -17,6 +17,11 @@ import ListItemIcon from '@mui/material/ListItemIcon';
 import ListItemText from '@mui/material/ListItemText';
 import HomeIcon from '@mui/icons-material/Home';
 import InboxIcon from '@mui/icons-material/MoveToInbox';
+import QueryStatsIcon from '@mui/icons-material/QueryStats';
+import SettingsIcon from '@mui/icons-material/Settings';
+
+import FeedIcon from '@mui/icons-material/Feed';
+import LocalMallIcon from '@mui/icons-material/LocalMall';
 
 
 import { useAppStore } from '../appStore';
@@ -144,9 +149,54 @@ export default function SideNav() {
                     justifyContent: 'center',
                   }}
                 >
-                 <InboxIcon />
+                 <FeedIcon />
                 </ListItemIcon>
                 <ListItemText primary="About" sx={{ opacity: open ? 1 : 0 }} />
+              </ListItemButton>
+            </ListItem>
+            <ListItem  disablePadding sx={{ display: 'block' }}
+            
+            onClick={()=>{navigate("/analytics")}}>
+              <ListItemButton
+                sx={{
+                  minHeight: 48,
+                  justifyContent: open ? 'initial' : 'center',
+                  px: 2.5,
+                }}
+              >
+                <ListItemIcon
+                  sx={{
+                    minWidth: 0,
+                    mr: open ? 3 : 'auto',
+                    justifyContent: 'center',
+                  }}
+                >
+                 <QueryStatsIcon />
+                </ListItemIcon>
+                <ListItemText primary="Analytics" sx={{ opacity: open ? 1 : 0 }} />
+              </ListItemButton>
+            </ListItem>
+
+            <ListItem  disablePadding sx={{ display: 'block' }}
+            
+            onClick={()=>{navigate("/products")}}>
+              <ListItemButton
+                sx={{
+                  minHeight: 48,
+                  justifyContent: open ? 'initial' : 'center',
+                  px: 2.5,
+                }}
+              >
+                <ListItemIcon
+                  sx={{
+                    minWidth: 0,
+                    mr: open ? 3 : 'auto',
+                    justifyContent: 'center',
+                  }}
+                >
+                 <LocalMallIcon  />
+                </ListItemIcon>
+                <ListItemText primary="Products" sx={{ opacity: open ? 1 : 0 }} />
               </ListItemButton>
             </ListItem>
 
@@ -167,7 +217,7 @@ export default function SideNav() {
                     justifyContent: 'center',
                   }}
                 >
-                 <InboxIcon />
+                 <SettingsIcon />
                 </ListItemIcon>
                 <ListItemText primary="Settings" sx={{ opacity: open ? 1 : 0 }} />
               </ListItemButton>

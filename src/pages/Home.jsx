@@ -16,7 +16,10 @@ import CreditCardIcon from '@mui/icons-material/CreditCard';
 import ShoppingBagIcon from '@mui/icons-material/ShoppingBag';
 import "../Dashboard.css"
 import Accordion from '../components/Accordion';
-import { BarCharts } from '../charts/BarCharts';
+import { BarChart } from '../charts/BarChart';
+
+
+import CountUp from 'react-countup';
 
 const Home = () => {
   return (
@@ -42,7 +45,7 @@ const Home = () => {
                             </div>
                             
                             <Typography gutterBottom variant='h5' component="div"  sx={{color: "#fff"}}>
-                                $550.00
+                                $<CountUp end={550.00} duration={2} />
                             </Typography>
 
                             <Typography gutterBottom variant='body2' component="div"
@@ -64,7 +67,7 @@ const Home = () => {
                         <ShoppingBagIcon  sx={{color: "#fff"}}/>
                         </div>
                         <Typography gutterBottom variant='h5' component="div"  sx={{color: "#fff"}}>
-                                $550.00
+                        $<CountUp end={550.00} duration={2} />
                             </Typography>
 
                             <Typography gutterBottom variant='body2' component="div"
@@ -80,7 +83,7 @@ const Home = () => {
               </Grid>
               <Grid item xs={4}>
                 <Stack spacing={2}>
-                  <Card sx={{ maxWidth: 345 , padding : 1, color: "#fcfcfc"}} className='gradienttwo' >
+                  <Card sx={{  padding : "8px 10px 8px 20px", color: "#fcfcfc"}} className='gradienttwo' >
                     
               
 
@@ -88,7 +91,7 @@ const Home = () => {
                         
                         <StorefrontIcon />
                         <div className="rtcontent">
-                            <strong className="topprice">$230k</strong>
+                            <strong className="topprice">$<CountUp end={220.00} duration={2} />k</strong>
                             <span>Total Income</span>
                         </div>
 
@@ -97,12 +100,12 @@ const Home = () => {
      
               
                   </Card>
-                  <Card sx={{ maxWidth: 345  , padding : 1}}>
+                  <Card sx={{ padding : "8px 10px 8px 20px"}}>
                     
                   <Stack spacing={2} direction="row" alignItems="center">
                       <StorefrontIcon />
                       <div className="rtcontent">
-                          <strong className="topprice">$230k</strong>
+                          <strong className="topprice">$<CountUp end={220.00} duration={2} />k</strong>
                           <span>Total Income</span>
                       </div>
 
@@ -120,7 +123,7 @@ const Home = () => {
                       <CardContent>
 
                           
-                      <BarCharts />
+                      <BarChart />
                       
                       </CardContent>
                 
